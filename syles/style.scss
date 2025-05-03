@@ -1,0 +1,33 @@
+@use "sass:math";
+@import "fonts";
+@import "reset";
+@import "variables";
+@import "mixins";
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: $mainColor;
+    color: $textColor;
+}
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+}
+.wrapper > main {
+    flex-grow: 1;
+}
+
+[class$="__container"] {
+    max-width: toRem($containerWidth);
+    padding-inline: toRem(15);
+    margin: 0 auto;
+}
+
+@import "common";
+@import "header";
+@import "main";

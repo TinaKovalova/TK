@@ -1,0 +1,120 @@
+.about {
+    position: sticky;
+    top: 0;
+    // .about__container
+
+    &__container {
+        min-height: 100svh;
+        padding-top: toRem(160);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    // .about__header
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: toRem(16);
+    }
+
+    // .about__title
+
+    &__title {
+        font-size: toRem(36);
+        font-weight: 300;
+        text-transform: capitalize;
+    }
+
+    // .about__text
+
+    &__text {
+        max-width: toRem(600);
+        text-align: center;
+        color: $textColorMuted;
+        font-size: toRem(18);
+        line-height: 1.2;
+    }
+}
+.porfolio {
+    padding-block: toRem(160);
+    position: sticky;
+    top: 0;
+    background-color: $mainColor;
+    // .porfolio__container
+
+    &__container {
+    }
+
+    // .porfolio__title
+
+    &__title {
+    }
+
+    // .porfolio__slider
+
+    &__slider {
+    }
+}
+.work-card {
+    width: toRem(684);
+    height: toRem(513);
+    background-color: $mutedBeige;
+    position: relative;
+
+    // .work-card__link
+
+    &__link {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    // .work-card__image
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        aspect-ratio: 684 / 513;
+    }
+
+    // .work-card__info
+
+    &__info {
+        position: absolute;
+        left: toRem(32);
+        bottom: toRem(32);
+        width: toPercent(620, 684);
+        display: flex;
+        align-items: center;
+        gap: toRem(16);
+        border-radius: toRem(2);
+        border: toRem(1) solid $mutedBeige;
+        background: $transperentWhite;
+        backdrop-filter: blur(toRem(15));
+        padding-inline: toRem(16);
+        padding-block: toRem(12);
+    }
+
+    // .work-card__info-link
+
+    &__info-link {
+        background-color: $transperentBeige;
+        border: toRem(1) solid $mutedBeige;
+        border-radius: 50%;
+        padding: toRem(16);
+        font-size: toRem(32);
+        color: $textColor;
+        text-align: center;
+    }
+
+    // .work-card__description
+
+    &__description {
+        flex-grow: 1;
+        text-align: end;
+    }
+}

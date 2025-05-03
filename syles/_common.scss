@@ -1,0 +1,8 @@
+.button {
+    padding-inline: toRem(16);
+    padding-block: toRem(10);
+    text-transform: capitalize;
+    border-radius: toRem(2);
+    background-color: $textColor;
+    color: $mainColor;
+}

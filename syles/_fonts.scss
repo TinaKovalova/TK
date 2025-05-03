@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+//  font-family: "Montserrat", sans-serif;
+// font-family: "Caveat", cursive;
+
+@font-face {
+    font-family: "icomoon";
+    src: url("../fonts/icomoon.woff?m82dpq") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="_icon-"],
+[class*="_icon-"] {
+    font-family: "icomoon" !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+._icon-envelope {
+    &:before {
+        content: "\e904";
+    }
+}
+._icon-github {
+    &:before {
+        content: "\e905";
+    }
+}
+._icon-linkedin {
+    &:before {
+        content: "\e906";
+    }
+}
+._icon-phone {
+    &:before {
+        content: "\e907";
+    }
+}
+._icon-telegram {
+    &:before {
+        content: "\e908";
+    }
+}
+._icon-eye {
+    &:before {
+        content: "\e9ce";
+    }
+}
