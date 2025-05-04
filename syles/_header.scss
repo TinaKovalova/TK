@@ -1,8 +1,11 @@
 .header {
     padding-block: toRem(12);
-    position: fixed;
-    top: toRem(48);
+    position: sticky;
+    top: 0;
+    z-index: 100;
     width: 100%;
+    background-color: $mainColor;
+
     // .header__container
 
     &__container {

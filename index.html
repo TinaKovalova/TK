@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base target="_blank">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>TK</title>
 </head>
 
@@ -17,10 +18,16 @@
                 <div class="header__actions">
                     <ul class="header__social social-list">
                         <li class="social-list__item">
-                            <a href="#" class="social-list__link _icon-linkedin"> </a>
+                            <a href="www.linkedin.com/in/tinakovalova" class="social-list__link _icon-linkedin"> </a>
                         </li>
                         <li class="social-list__item">
-                            <a href="#" class="social-list__link _icon-telegram"></a>
+                            <a href="https://t.me/Tina_Kovalova" class="social-list__link _icon-telegram"></a>
+                        </li>
+                        <li class="social-list__item">
+                            <a href="mailto:kovalevatkv@gmail.com" class="social-list__link _icon-envelope"> </a>
+                        </li>
+                        <li class="social-list__item">
+                            <a href="tel:+380664036838" class="social-list__link _icon-phone"></a>
                         </li>
                     </ul>
 
@@ -29,7 +36,7 @@
         </header>
         <main class="page">
             </aside>
-            <!-- <section class="about">
+            <section class="about">
                 <div class="about__container">
                     <div class="about__header">
                         <h1 class="about__title">
@@ -40,32 +47,113 @@
                         <button type="button" class="button">Download CV</button>
                     </div>
                 </div>
-            </section> -->
+            </section>
             <section class="porfolio">
                 <div class="porfolio__container">
                     <h2 class="porfolio__title">Selected work</h2>
-                    <div class="porfolio__slider">
-                        <article class="work-card">
-                            <a href="#" class="work-card__link">
-                                <img src="images/test.jpg" alt="" class="work-card__image">
-                            </a>
-                            <div class="work-card__info">
-                                <a href="#" class="work-card__info-link _icon-github"></a>
-                                <a href="#" class="work-card__info-link _icon-eye"></a>
-                                <div class="work-card__description">HTML, SCSS, JS</div>
+                    <div class="porfolio__slider swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <article class="work-card">
+                                    <a href="#" class="work-card__link">
+                                        <img src="images/portrfolio/pure-brush.png" alt="PureBrush landing"
+                                            class="work-card__image">
+                                    </a>
+                                    <div class="work-card__actions">
+                                        <a href="#" class="work-card__info-link _icon-github"></a>
+                                        <a href="#" class="work-card__info-link _icon-eye"></a>
+                                    </div>
+                                    <div class="work-card__info">
+                                        <h5 class="work-card__title">PureBrush</h5>
+                                        <div class="work-card__description">HTML, SCSS, JS</div>
+                                    </div>
+                                </article>
                             </div>
-                        </article>
+                            <div class="swiper-slide">
+                                <article class="work-card">
+                                    <a href="#" class="work-card__link">
+                                        <img src="images/portrfolio/spherule.jpg" alt="Spherule landing"
+                                            class="work-card__image">
+                                    </a>
+                                    <div class="work-card__actions">
+                                        <a href="#" class="work-card__info-link _icon-github"></a>
+                                        <a href="#" class="work-card__info-link _icon-eye"></a>
+                                    </div>
+                                    <div class="work-card__info">
+                                        <h5 class="work-card__title">spherule</h5>
+                                        <div class="work-card__description">HTML, SCSS, JS</div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="work-card">
+                                    <a href="#" class="work-card__link">
+                                        <img src="images/test.jpg" alt="" class="work-card__image">
+                                    </a>
+                                    <div class="work-card__actions">
+                                        <a href="#" class="work-card__info-link _icon-github"></a>
+                                        <a href="#" class="work-card__info-link _icon-eye"></a>
+                                    </div>
+                                    <div class="work-card__info">
+                                        <h5 class="work-card__title">Landing</h5>
+                                        <div class="work-card__description">HTML, SCSS, JS</div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="work-card">
+                                    <a href="#" class="work-card__link">
+                                        <img src="images/test.jpg" alt="" class="work-card__image">
+                                    </a>
+                                    <div class="work-card__actions">
+                                        <a href="#" class="work-card__info-link _icon-github"></a>
+                                        <a href="#" class="work-card__info-link _icon-eye"></a>
+                                    </div>
+                                    <div class="work-card__info">
+                                        <h5 class="work-card__title">Landing</h5>
+                                        <div class="work-card__description">HTML, SCSS, JS</div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="work-card">
+                                    <a href="#" class="work-card__link">
+                                        <img src="images/test.jpg" alt="" class="work-card__image">
+                                    </a>
+                                    <div class="work-card__actions">
+                                        <a href="#" class="work-card__info-link _icon-github"></a>
+                                        <a href="#" class="work-card__info-link _icon-eye"></a>
+                                    </div>
+                                    <div class="work-card__info">
+                                        <h5 class="work-card__title">Landing</h5>
+                                        <div class="work-card__description">HTML, SCSS, JS</div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="work-card">
+                                    <a href="#" class="work-card__link">
+                                        <img src="images/test.jpg" alt="" class="work-card__image">
+                                    </a>
+                                    <div class="work-card__actions">
+                                        <a href="#" class="work-card__info-link _icon-github"></a>
+                                        <a href="#" class="work-card__info-link _icon-eye"></a>
+                                    </div>
+                                    <div class="work-card__info">
+                                        <h5 class="work-card__title">Landing</h5>
+                                        <div class="work-card__description">HTML, SCSS, JS</div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </section>
-            <section class="contacts">
-                <div class="contacts__container">
-
-                </div>
-            </section>
-
         </main>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/swiper.js"></script>
 
 </body>
 
