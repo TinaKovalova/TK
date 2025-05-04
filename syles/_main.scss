@@ -100,7 +100,6 @@
     background-color: $mutedBeige;
     border: toRem(1) solid $mutedBeige;
     position: relative;
-    font-size: 0;
     overflow: hidden;
 
     &::after {
@@ -108,7 +107,7 @@
         width: 100%;
         height: 100%;
         position: absolute;
-        z-index: 1;
+        z-index: 0;
         top: 0;
         left: 0;
         background-color: transparent;
@@ -116,9 +115,23 @@
         transition:
             backdrop-filter 0.4s,
             background-color 0.4s;
-        // @media (max-width: $tablet) {
-        //     pointer-events: none;
-        // }
+    }
+
+    // .work-card__link
+
+    &__link {
+        width: 100%;
+        height: 100%;
+    }
+
+    // .work-card__image
+
+    &__image {
+        width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        object-position: top center;
+        aspect-ratio: 682 / 365;
     }
     @media (any-hover: hover) {
         &:hover {
@@ -127,7 +140,7 @@
                 opacity: 1;
             }
             & .work-card__info {
-                height: auto;
+                height: max-content;
                 overflow: visible;
                 border: toRem(1) solid $mutedBeige;
                 padding-block: toRem(12);
@@ -156,50 +169,19 @@
             }
         }
     }
-    // .work-card__link
-
-    &__link {
-        width: 100%;
-        height: 100%;
-    }
-
-    // .work-card__image
-
-    &__image {
-        width: 100%;
-        min-height: 100%;
-        object-fit: cover;
-        object-position: top center;
-        aspect-ratio: 682 / 365;
-    }
     //work-card__actions
     &__actions {
         position: absolute;
         top: 50%;
         left: 0;
-        z-index: 2;
+        z-index: 5;
         transform: translateY(-50%);
         width: 100%;
         display: flex;
         justify-content: center;
         column-gap: toRem(30);
         opacity: 0;
-        pointer-events: none;
         transition: opacity 0.4s;
-        // @media (max-width: $tablet) {
-        //     opacity: 1;
-        //     top: auto;
-        //     left: auto;
-        //     right: 0;
-        //     bottom: 0;
-        //     transform: translateY(0);
-        //     width: max-content;
-        //     flex-direction: column;
-        //     row-gap: toRem(8);
-        //     padding-inline: toRem(8);
-        //     padding-block-end: toRem(4);
-        //     opacity: 0.8;
-        // }
     }
 
     // .work-card__info-link
@@ -222,17 +204,6 @@
                 background-color: $textColorMuted;
             }
         }
-        @media (any-hover: none) and (pointer: coarse) {
-            &:hover {
-                color: $hoverText;
-                border-color: $hoverText;
-                background-color: $textColorMuted;
-            }
-        }
-        // @media (max-width: $tablet) {
-        //     font-size: toRem(18);
-        //     background-color: $mainColorTransperent;
-        // }
     }
     // .work-card__info
 
@@ -255,28 +226,25 @@
         overflow: hidden;
         padding-block: 0;
         transition: all 0.4s;
-        @media (max-width: $mobile) {
-            display: none;
+        @media (max-width: $tablet) {
+            // display: none;
         }
         //work-card__title
         &__title {
             @include adaptiveValue("font-size", 20, 14);
             font-weight: 600;
-
             align-self: flex-start;
             &::first-letter {
                 text-transform: uppercase;
             }
         }
-
-        // .work-card__description
-
+        //
         &__description {
             flex-grow: 1;
             flex-shrink: 1;
             text-align: end;
             font-weight: 300;
-            font-size: toRem(14);
+            font-size: toRem;
         }
     }
 }

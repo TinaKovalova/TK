@@ -353,7 +353,6 @@ body {
   background-color: rgba(218, 197, 167, 0.15);
   border: 0.0625rem solid rgba(218, 197, 167, 0.15);
   position: relative;
-  font-size: 0;
   overflow: hidden;
 }
 .work-card::after {
@@ -361,7 +360,7 @@ body {
   width: 100%;
   height: 100%;
   position: absolute;
-  z-index: 1;
+  z-index: 0;
   top: 0;
   left: 0;
   background-color: transparent;
@@ -372,12 +371,27 @@ body {
   transition: backdrop-filter 0.4s, background-color 0.4s;
   transition: backdrop-filter 0.4s, background-color 0.4s, -webkit-backdrop-filter 0.4s;
 }
+.work-card__link {
+  width: 100%;
+  height: 100%;
+}
+.work-card__image {
+  width: 100%;
+  min-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top center;
+     object-position: top center;
+  aspect-ratio: 682/365;
+}
 @media (any-hover: hover) {
   .work-card:hover .work-card__actions, .work-card:hover .work-card__info {
     opacity: 1;
   }
   .work-card:hover .work-card__info {
-    height: auto;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
     overflow: visible;
     border: 0.0625rem solid rgba(218, 197, 167, 0.15);
     padding-block: 0.75rem;
@@ -404,24 +418,11 @@ body {
     background-color: rgba(14, 14, 14, 0.3);
   }
 }
-.work-card__link {
-  width: 100%;
-  height: 100%;
-}
-.work-card__image {
-  width: 100%;
-  min-height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top center;
-     object-position: top center;
-  aspect-ratio: 682/365;
-}
 .work-card__actions {
   position: absolute;
   top: 50%;
   left: 0;
-  z-index: 2;
+  z-index: 5;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -436,7 +437,6 @@ body {
      -moz-column-gap: 1.875rem;
           column-gap: 1.875rem;
   opacity: 0;
-  pointer-events: none;
   -webkit-transition: opacity 0.4s;
   transition: opacity 0.4s;
 }
@@ -452,13 +452,6 @@ body {
   transition: color 0.4s, border-color 0.4s;
 }
 @media (any-hover: hover) {
-  .work-card__info-link:hover {
-    color: #f9faf9;
-    border-color: #f9faf9;
-    background-color: rgba(218, 197, 167, 0.6);
-  }
-}
-@media (any-hover: none) and (pointer: coarse) {
   .work-card__info-link:hover {
     color: #f9faf9;
     border-color: #f9faf9;
@@ -491,11 +484,6 @@ body {
   padding-block: 0;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
-}
-@media (max-width: 767.98px) {
-  .work-card__info {
-    display: none;
-  }
 }
 .work-card__info__title {
   font-weight: 600;
@@ -535,5 +523,5 @@ body {
       flex-shrink: 1;
   text-align: end;
   font-weight: 300;
-  font-size: 0.875rem;
+  font-size: toRem;
 }
