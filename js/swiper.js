@@ -16,7 +16,7 @@ const slider = new Swiper(".porfolio__slider.swiper", {
       spaceBetween: 10,
     },
 
-    480: {
+    600: {
       slidesPerView: 2,
       spaceBetween: 20,
       grid: {

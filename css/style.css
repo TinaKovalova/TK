@@ -473,6 +473,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   gap: 1rem 2.5rem;
   border-radius: 0.125rem;
   background: rgba(255, 255, 255, 0.05);
@@ -485,7 +488,14 @@ body {
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
+@media (max-width: 991.98px) {
+  .work-card__info {
+    display: none;
+  }
+}
 .work-card__info__title {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   font-weight: 600;
   -ms-flex-item-align: start;
       align-self: flex-start;
@@ -516,12 +526,8 @@ body {
   text-transform: uppercase;
 }
 .work-card__info__description {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
   -ms-flex-negative: 1;
       flex-shrink: 1;
-  text-align: end;
   font-weight: 300;
-  font-size: toRem;
+  font-size: 0.875rem;
 }

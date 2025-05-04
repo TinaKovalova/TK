@@ -217,6 +217,7 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
+        justify-content: space-between;
         gap: toRem(16) toRem(40);
         border-radius: toRem(2);
         background: $transperentWhite;
@@ -227,10 +228,11 @@
         padding-block: 0;
         transition: all 0.4s;
         @media (max-width: $tablet) {
-            // display: none;
+            display: none;
         }
         //work-card__title
         &__title {
+            flex-shrink: 0;
             @include adaptiveValue("font-size", 20, 14);
             font-weight: 600;
             align-self: flex-start;
@@ -240,11 +242,9 @@
         }
         //
         &__description {
-            flex-grow: 1;
             flex-shrink: 1;
-            text-align: end;
             font-weight: 300;
-            font-size: toRem;
+            font-size: toRem(14);
         }
     }
 }
