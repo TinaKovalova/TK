@@ -1,6 +1,7 @@
 .about {
     position: sticky;
     top: toRem(64);
+    flex-grow: 1;
     // .about__container
 
     &__container {
@@ -22,8 +23,9 @@
     // .about__title
 
     &__title {
-        font-size: toRem(36);
-        font-weight: 300;
+        font-family: "Caveat", cursive;
+        font-size: toRem(40);
+        font-weight: 700;
         text-transform: capitalize;
     }
 
@@ -146,7 +148,7 @@
         min-height: 100%;
         object-fit: cover;
         object-position: top center;
-        // aspect-ratio: 682 / 365;
+        aspect-ratio: 682 / 365;
     }
     //work-card__actions
     &__actions {
@@ -161,13 +163,27 @@
         column-gap: toRem(30);
         opacity: 0;
         transition: opacity 0.4s;
+        @media (max-width: $tablet) {
+            opacity: 1;
+            top: auto;
+            left: auto;
+            right: 0;
+            bottom: 0;
+            transform: translateY(0);
+            width: max-content;
+            flex-direction: column;
+            row-gap: toRem(8);
+            padding-inline: toRem(4);
+            padding-block-end: toRem(4);
+            opacity: 0.8;
+        }
     }
 
     // .work-card__info-link
 
     &__info-link {
         background-color: $transperentBeige;
-        border: toRem(1) solid $mutedBeige;
+        border: toRem(1) solid $textColor;
         border-radius: 50%;
         padding: toRem(16);
         font-size: toRem(40);
@@ -180,8 +196,13 @@
             &:hover {
                 color: $hoverText;
                 border-color: $hoverText;
-                // background-color: $textColorMuted;
+                background-color: $textColorMuted;
             }
+        }
+        @media (max-width: $tablet) {
+            padding: toRem(3);
+            font-size: toRem(16);
+            background-color: $mainColorTransperent;
         }
     }
     // .work-card__info

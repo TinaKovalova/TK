@@ -1,7 +1,7 @@
 const slider = new Swiper(".porfolio__slider.swiper", {
   grid: {
     fill: "row",
-    rows: 2,
+    rows: 3,
   },
   pagination: {
     el: ".swiper-pagination",
@@ -11,7 +11,6 @@ const slider = new Swiper(".porfolio__slider.swiper", {
     },
   },
   breakpoints: {
-
     320: {
       slidesPerView: 1,
       spaceBetween: 10,
@@ -20,8 +19,10 @@ const slider = new Swiper(".porfolio__slider.swiper", {
     480: {
       slidesPerView: 2,
       spaceBetween: 20,
+      grid: {
+        rows: 2,
+      },
     },
-   
   },
 });
 
