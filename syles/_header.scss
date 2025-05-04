@@ -23,11 +23,6 @@
         gap: toRem(20);
         justify-content: flex-end;
     }
-
-    // .header__social
-
-    &__social {
-    }
 }
 .logo {
     flex-shrink: 0;
@@ -44,10 +39,6 @@
     gap: toRem(20);
     @media (max-width: $mobile) {
         gap: toRem(12);
-    }
-    // .social-list__item
-
-    &__item {
     }
 
     // .social-list__link
