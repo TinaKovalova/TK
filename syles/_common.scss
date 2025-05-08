@@ -5,4 +5,13 @@
     border-radius: toRem(2);
     background-color: $textColor;
     color: $mainColor;
+    transition:
+        background-color 0.4s,
+        color 0.4s;
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: $textColorMuted;
+            color: $textColor;
+        }
+    }
 }

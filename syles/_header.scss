@@ -51,5 +51,11 @@
         font-size: toRem(18);
         color: $textColor;
         text-align: center;
+        transition: background-color 0.4s;
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $textColorMuted;
+            }
+        }
     }
 }
