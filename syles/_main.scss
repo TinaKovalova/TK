@@ -45,19 +45,21 @@
     min-height: calc(100svh - toRem(64));
     padding-block: toRem(20);
     background-color: $mainColor;
-    &::before {
-        content: "";
-        width: 100%;
-        height: toRem(45);
-        background: linear-gradient(to top, #0e0e0e, rgba(14, 14, 14, 0));
-        position: absolute;
-        left: 0;
-        top: 0;
-        transform: translateY(-100%);
-    }
+
     // .porfolio__container
 
     &__container {
+        position: relative;
+        &::before {
+            content: "";
+            width: 100%;
+            height: toRem(40);
+            background: linear-gradient(to top, #0e0e0e 0%, rgba(14, 14, 14, 0.7) 62%);
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform: translateY(-100%);
+        }
         display: flex;
         flex-direction: column;
         row-gap: toRem(10);
