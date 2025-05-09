@@ -45,6 +45,16 @@
     min-height: calc(100svh - toRem(64));
     padding-block: toRem(20);
     background-color: $mainColor;
+    &::before {
+        content: "";
+        width: 100%;
+        height: toRem(45);
+        background: linear-gradient(to top, #0e0e0e, rgba(14, 14, 14, 0));
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translateY(-100%);
+    }
     // .porfolio__container
 
     &__container {
@@ -102,26 +112,25 @@
     position: relative;
     overflow: hidden;
 
-    &::after {
-        content: "";
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        z-index: 0;
-        top: 0;
-        left: 0;
-        background-color: transparent;
-        backdrop-filter: blur(0);
-        transition:
-            backdrop-filter 0.4s,
-            background-color 0.4s;
-    }
-
     // .work-card__link
 
     &__link {
         width: 100%;
         height: 100%;
+        &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            left: 0;
+            background-color: $mainColorTransperent;
+            backdrop-filter: blur(0);
+            transition:
+                backdrop-filter 0.4s,
+                background-color 0.4s;
+        }
     }
 
     // .work-card__image
@@ -133,50 +142,14 @@
         object-position: top center;
         aspect-ratio: 682 / 365;
     }
-    @media (any-hover: hover) {
-        &:hover {
-            & .work-card__actions,
-            & .work-card__info {
-                opacity: 1;
-            }
-            & .work-card__info {
-                height: max-content;
-                overflow: visible;
-                border: toRem(1) solid $mutedBeige;
-                padding-block: toRem(12);
-            }
-            &::after {
-                backdrop-filter: blur(toRem(2));
-                background-color: $mainColorTransperent;
-            }
-        }
-    }
-    @media (any-hover: none) and (pointer: coarse) {
-        &:hover {
-            & .work-card__actions,
-            & .work-card__info {
-                opacity: 1;
-            }
-            & .work-card__info {
-                height: auto;
-                overflow: visible;
-                border: toRem(1) solid $mutedBeige;
-                padding-block: toRem(6);
-            }
-            &::after {
-                backdrop-filter: blur(toRem(2));
-                background-color: $mainColorTransperent;
-            }
-        }
-    }
+
     //work-card__actions
     &__actions {
         position: absolute;
         top: 50%;
-        left: 0;
+        left: 50%;
         z-index: 5;
-        transform: translateY(-50%);
-        width: 100%;
+        transform: translate(-50%, -50%);
         display: flex;
         justify-content: center;
         column-gap: toRem(30);
@@ -209,6 +182,7 @@
     // .work-card__info
 
     &__info {
+        text-transform: capitalize;
         position: absolute;
         left: 5%;
         bottom: toRem(16);
@@ -237,15 +211,48 @@
             @include adaptiveValue("font-size", 20, 14);
             font-weight: 600;
             align-self: flex-start;
-            &::first-letter {
-                text-transform: uppercase;
-            }
         }
         //
         &__description {
             flex-shrink: 1;
             font-weight: 300;
             font-size: toRem(14);
+        }
+    }
+    @media (any-hover: hover) {
+        &:hover {
+            & .work-card__actions,
+            & .work-card__info {
+                opacity: 1;
+            }
+            & .work-card__info {
+                height: max-content;
+                overflow: visible;
+                border: toRem(1) solid $mutedBeige;
+                padding-block: toRem(12);
+            }
+            & .work-card__link::after {
+                backdrop-filter: blur(toRem(2));
+                background-color: rgb(14, 14, 14, 0.6);
+            }
+        }
+    }
+    @media (any-hover: none) and (pointer: coarse) {
+        &:hover {
+            & .work-card__actions,
+            & .work-card__info {
+                opacity: 1;
+            }
+            & .work-card__info {
+                height: auto;
+                overflow: visible;
+                border: toRem(1) solid $mutedBeige;
+                padding-block: toRem(6);
+            }
+            & .work-card__link::after {
+                backdrop-filter: blur(toRem(2));
+                background-color: $mainColorTransperent;
+            }
         }
     }
 }
