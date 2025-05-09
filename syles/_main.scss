@@ -252,7 +252,7 @@
             }
             & .work-card__link::after {
                 backdrop-filter: blur(toRem(2));
-                background-color: $mainColorTransperent;
+                background-color: rgb(14, 14, 14, 0.6);
             }
         }
     }

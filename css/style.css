@@ -554,6 +554,6 @@ body {
   .work-card:hover .work-card__link::after {
     -webkit-backdrop-filter: blur(0.125rem);
             backdrop-filter: blur(0.125rem);
-    background-color: rgba(14, 14, 14, 0.3);
+    background-color: rgba(14, 14, 14, 0.6);
   }
 }
