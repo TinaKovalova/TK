@@ -107,6 +107,7 @@
     width: 100%;
     height: 100%;
     aspect-ratio: 682 / 365;
+    border-radius: toRem(4);
     background-color: $mutedBeige;
     border: toRem(1) solid $mutedBeige;
     position: relative;
