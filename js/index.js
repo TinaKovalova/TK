@@ -22,7 +22,7 @@ window.addEventListener("load", () => {
                             </div>`;
     };
 
-    getData("../files/data.json");
+    getData("https://tinakovalova.github.io/TK/files/data.json");
 
     async function getData(dataUrl) {
         try {
