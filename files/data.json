@@ -1,0 +1,53 @@
+{
+    "owner":"Tina Kovalova",
+    "projects":[
+        {
+            "title":"PureBrush",
+            "imagePath":"images/portrfolio/pure-brush.webp",
+            "githubURL":"https://github.com/TinaKovalova/pure-brush",
+            "projectURL":"https://tinakovalova.github.io/pure-brush",
+            "technologies":["HTML", "SCSS", "JS"],
+            "projectDitails":"landing"
+        },
+        {
+            "title":"Spherule",
+            "imagePath":"images/portrfolio/spherule.webp",
+            "githubURL":"https://github.com/TinaKovalova/spherule",
+            "projectURL":"https://tinakovalova.github.io/spherule",
+            "technologies":["HTML", "SCSS", "JS"],
+            "projectDitails":"landing"
+        },
+        {
+            "title":"Lumo winter fest",
+            "imagePath":"images/portrfolio/lumo.webp",
+            "githubURL":"https://github.com/TinaKovalova/lumo",
+            "projectURL":"https://tinakovalova.github.io/lumo",
+            "technologies":["HTML", "SCSS", "JS"],
+            "projectDitails":"landing"
+        },
+        {
+            "title":"NekoInn",
+            "imagePath":"images/portrfolio/nekoinn.webp",
+            "githubURL":"https://github.com/TinaKovalova/neko",
+            "projectURL":"https://tinakovalova.github.io/neko",
+            "technologies":["HTML", "SCSS", "JS"],
+            "projectDitails":"landing"
+        },
+        {
+            "title":"Coffee house",
+            "imagePath":"images/portrfolio/coffee-house.webp",
+            "githubURL":"https://github.com/TinaKovalova/coffee-house",
+            "projectURL":"https://tinakovalova.github.io/coffee-house",
+            "technologies":["HTML", "SCSS"],
+            "projectDitails":"landing"
+        },
+        {
+            "title":"The Tasteat",
+            "imagePath":"images/portrfolio/tasteat.webp",
+            "githubURL":"https://github.com/TinaKovalova/tasteat",
+            "projectURL":"https://tinakovalova.github.io/tasteat",
+            "technologies":["HTML", "SCSS", "JS"],
+            "projectDitails":"landing"
+        }
+    ]
+}
