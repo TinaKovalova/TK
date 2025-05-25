@@ -139,7 +139,7 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: #0e0e0e;
+  background-color: #080c17;
   color: #dac5a7;
 }
 
@@ -173,7 +173,7 @@ body {
   text-transform: capitalize;
   border-radius: 0.125rem;
   background-color: #dac5a7;
-  color: #0e0e0e;
+  color: #080c17;
   -webkit-transition: background-color 0.4s, color 0.4s;
   transition: background-color 0.4s, color 0.4s;
 }
@@ -190,7 +190,7 @@ body {
   top: 0;
   z-index: 100;
   width: 100%;
-  background-color: #0e0e0e;
+  background-color: #080c17;
 }
 .header__container {
   display: -webkit-box;
@@ -311,10 +311,9 @@ body {
   top: 4rem;
   min-height: calc(100svh - 4rem);
   padding-block: 1.25rem;
-  background-color: #0e0e0e;
+  background-color: #080c17;
 }
 .porfolio__container {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -323,19 +322,8 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   row-gap: 0.625rem;
-}
-.porfolio__container::before {
-  content: "";
-  width: 100%;
-  height: 2.5rem;
-  background: -webkit-gradient(linear, left bottom, left top, from(#0e0e0e), color-stop(62%, rgba(14, 14, 14, 0.7)));
-  background: linear-gradient(to top, #0e0e0e 0%, rgba(14, 14, 14, 0.7) 62%);
-  position: absolute;
-  left: 0;
-  top: 0;
-  -webkit-transform: translateY(-100%);
-      -ms-transform: translateY(-100%);
-          transform: translateY(-100%);
+  -webkit-box-shadow: 0rem -1.875rem 0.625rem #080c17;
+          box-shadow: 0rem -1.875rem 0.625rem #080c17;
 }
 .porfolio__title {
   font-size: 1.25rem;

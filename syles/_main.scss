@@ -49,20 +49,10 @@
     // .porfolio__container
 
     &__container {
-        position: relative;
-        &::before {
-            content: "";
-            width: 100%;
-            height: toRem(40);
-            background: linear-gradient(to top, #0e0e0e 0%, rgba(14, 14, 14, 0.7) 62%);
-            position: absolute;
-            left: 0;
-            top: 0;
-            transform: translateY(-100%);
-        }
         display: flex;
         flex-direction: column;
         row-gap: toRem(10);
+        box-shadow: toRem(0) toRem(-30) toRem(10) $mainColor;
     }
 
     // .porfolio__title
