@@ -25,18 +25,22 @@ window.addEventListener("load", () => {
                             </div>`;
     };
     const fillPortfolio = (projects) => {
-        const swiperWrapper = document.querySelector(".swiper-wrapper");
-        if (swiperWrapper) {
+        const portfolioContent = document.querySelector(".porfolio__content");
+        if (portfolioContent) {
           for (const project of projects) {
-            swiperWrapper.insertAdjacentHTML("beforeend", createSlide(project));
+            portfolioContent.insertAdjacentHTML(
+              "beforeend",
+              createSlide(project)
+            );
           }
-        const projectsImages = swiperWrapper.querySelectorAll(".work-card__image");
-        if (projectsImages.length > 0) {
-          projectsImages.forEach((image) =>
-            image.addEventListener("load", (e) => toShow(e.target))
-          );
+          const projectsImages =
+            portfolioContent.querySelectorAll(".work-card__image");
+          if (projectsImages.length > 0) {
+            projectsImages.forEach((image) =>
+              image.addEventListener("load", (e) => toShow(e.target))
+            );
+          }
         }
-    }
     }
 
     getData("files/data.json");

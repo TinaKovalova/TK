@@ -34,12 +34,12 @@
             "projectDitails":"landing"
         },
         {
-            "title":"Coffee house",
-            "imagePath":"images/portrfolio/coffee-house.webp",
-            "githubURL":"https://github.com/TinaKovalova/coffee-house",
-            "projectURL":"https://tinakovalova.github.io/coffee-house",
-            "technologies":["HTML", "SCSS"],
-            "projectDitails":"landing"
+            "title":"Lalasia",
+            "imagePath":"images/portrfolio/lalasia_s.webp",
+            "githubURL":"https://github.com/TinaKovalova/lalasia",
+            "projectURL":"",
+            "technologies":["HTML", "SCSS", "JS", "Vite"],
+            "projectDitails":"Multipage website"
         },
         {
             "title":"The Tasteat",
